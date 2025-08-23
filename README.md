@@ -69,3 +69,98 @@ Redis
 
 Celery
   A task queue that works with Redis or RabbitMQ for asynchronous processing (e.g., sending confirmation emails, processing payments, cleaning expired reservations).
+
+
+  Database Design
+
+ 1.User
+
+Represents hosts and guests.
+Important Fields
+
+* 'id' – unique identifier
+* `name` – full name of the user
+* `email` – login credential (unique)
+* `role` – "host" or "guest" (a user can be both)
+* `created_at` – account creation date
+
+Relationships
+
+* A User can list multiple Properties.
+* A User can make multiple Bookings.
+* A User can leave Reviews for Properties or other Users (hosts).
+
+
+
+2. Property
+
+Represents a listing (house, apartment, room, etc.).
+Important Fields
+
+* `id` – unique identifier
+* `title` – property name/short description
+* `description` – detailed information about the property
+* `location` – address or geo-coordinates
+* `price_per_night` – base cost for booking
+
+Relationships
+
+* A Property belongs to one User (host).
+* A Property can have multiple Bookings.
+* A Property can have multiple Reviews.
+
+
+ 3. Booking
+
+Represents a reservation made by a guest.
+Important Fields
+
+* `id` – unique identifier
+* `check_in` – start date of stay
+* `check_out` – end date of stay
+* `status` – pending, confirmed, canceled, completed
+* `total_price` – calculated cost for the booking
+
+Relationships
+
+* A Booking belongs to one Property.
+* A Booking is made by one User (guest).
+* A Booking may have one Payment associated.
+
+
+
+ 4. Review
+
+Represents feedback left by a guest (and possibly host reviews of guests).
+Important Fields
+
+* `id` – unique identifier
+* `rating` – numerical score (e.g., 1–5)
+* `comment` – review text
+* `created_at` – date review was submitted
+* `reviewer_id` – who left the review
+
+Relationships
+
+* A Review belongs to a User (reviewer).
+* A Review belongs to a Property (and optionally to a host/guest directly).
+
+
+
+5. Payment
+
+Represents transactions for bookings.
+Important Fields
+
+* `id` – unique identifier
+* `amount` – total paid
+* `payment_method` – credit card, PayPal, etc.
+* `status` – pending, successful, failed, refunded
+* `transaction_date` – date of payment
+
+Relationships
+
+* A Payment belongs to one Booking.
+* A Payment is made by a User (guest).
+
+
