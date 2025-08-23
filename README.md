@@ -164,3 +164,51 @@ Relationships
 * A Payment is made by a User (guest).
 
 
+
+
+Feature Breakdown
+
+
+ 1. User Management
+
+Handles authentication, authorization, and profile management. Users can sign up as guests or hosts, log in securely, and manage their personal details. This ensures a trusted environment where both hosts and guests can interact safely.
+
+
+
+2. Property Management
+
+Hosts can create, update, and manage their property listings with details like title, description, location, pricing, and availability. This feature allows the platform to showcase diverse accommodations, forming the core offering of the booking service.
+
+
+
+3. Booking System
+
+Guests can search for properties, select dates, and make reservations. The system ensures availability checks, manages booking statuses (pending, confirmed, canceled), and prevents double-bookings. This feature drives the main functionality of connecting guests with hosts.
+
+
+
+ 4. Review & Rating System
+
+Guests can leave feedback and ratings for properties they’ve stayed in, and optionally, hosts can review guests. This fosters transparency, builds trust, and encourages quality service across the platform.
+
+
+
+ 5. Payment Processing
+
+Handles secure online transactions for bookings. Integrates with payment gateways (e.g., credit card, PayPal) to process payments, track statuses, and manage refunds if necessary. This feature ensures the business side of the platform functions smoothly.
+
+
+
+6. Search & Filtering
+
+Enables users to find properties by location, price range, dates, and amenities. This makes the platform more user-friendly by allowing guests to quickly find accommodations that match their preferences.
+
+
+
+7. Security & Authentication
+
+Implements features like encrypted passwords, session management, and possibly two-factor authentication. This safeguards sensitive user information and ensures secure interactions between guests and hosts.
+
+
+
+
