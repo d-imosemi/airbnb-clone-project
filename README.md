@@ -271,3 +271,32 @@ API Security
 
 
 
+CI/CD Pipeline
+
+CI (Continuous Integration): Developers regularly merge code changes into a shared repository. Automated tests and builds run to ensure the new code doesn’t break existing functionality.
+
+CD (Continuous Delivery/Deployment): Once the code passes tests, it is automatically prepared for release (Delivery) or directly deployed to production (Deployment).
+
+
+Importance for the Airbnb Clone Project
+
+Faster Development Cycles: Every code change (e.g., new booking feature) is automatically tested and integrated, allowing the team to ship updates quickly.
+
+Improved Quality & Reliability: Automated testing ensures bugs are caught early before reaching users.
+
+Consistent Environments: Using containerization (e.g., Docker) ensures the app runs the same in development, staging, and production.
+
+Reduced Downtime: Automated deployments minimize manual errors and ensure smoother releases.
+
+
+Tools Commonly Used
+
+GitHub Actions / GitLab CI / Jenkins: For automating builds, testing, and deployment pipelines.
+
+Docker: For containerizing the app, ensuring consistency across environments.
+
+Kubernetes (optional, for scaling): For orchestrating containers in large deployments.
+
+SonarQube (optional): For code quality and static analysis.
+
+AWS CodePipeline / Azure DevOps / Google Cloud Build: Cloud-native CI/CD tools if hosted on cloud platforms.
