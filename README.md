@@ -212,3 +212,62 @@ Implements features like encrypted passwords, session management, and possibly t
 
 
 
+API Security
+
+
+ 1. Authentication
+
+* What it is: Secure login and identity verification (e.g., email/password with hashing, JWT tokens, or OAuth for third-party logins).
+* Why it’s crucial: Ensures only verified users (hosts/guests) can access their accounts, protecting personal data and preventing unauthorized access.
+
+
+2. Authorization
+
+* What it is: Role-based access control (RBAC) to define what actions users can perform (e.g., only hosts can manage properties, only guests can make bookings).
+* Why it’s crucial: Prevents misuse of the system by ensuring users can only perform actions relevant to their role, securing sensitive operations.
+
+
+
+3. Data Encryption
+
+* What it is: Encrypting sensitive data at rest (e.g., hashed passwords, encrypted payment tokens) and in transit (via HTTPS/TLS).
+* Why it’s crucial: Protects user credentials, personal info, and financial data from breaches and man-in-the-middle attacks.
+
+
+
+4. Secure Payments
+
+* What it is: Integration with trusted payment gateways (e.g., Stripe, PayPal) that handle PCI compliance, tokenization, and fraud detection.
+* Why it’s crucial: Prevents financial fraud, protects card details, and ensures trust in handling guest payments and host payouts.
+
+
+
+5. Rate Limiting & Throttling
+
+* What it is: Limiting the number of API requests a user/IP can make in a given timeframe.
+* Why it’s crucial: Protects against brute-force attacks, credential stuffing, and denial-of-service (DoS) attempts.
+
+
+
+6. Input Validation & Sanitization
+
+* What it is: Validating and cleaning all user input to prevent SQL injection, XSS (cross-site scripting), and CSRF (cross-site request forgery).
+* Why it’s crucial: Ensures that malicious users cannot inject harmful code or compromise the database and frontend.
+
+
+
+7. Logging & Monitoring
+
+* What it is: Keeping detailed logs of user activities, failed login attempts, and unusual behavior.
+* Why it’s crucial: Helps detect suspicious activity early (e.g., account takeovers, fraud attempts) and supports audits for compliance.
+
+
+
+ 8. Secure Session Management
+
+* What it is: Using secure cookies, session expiration, and logout mechanisms.
+* Why it’s crucial: Prevents session hijacking, keeping users safely logged in without exposing tokens.
+
+
+
+
